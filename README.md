@@ -29,30 +29,26 @@ This section describes how to generate the points $P_2$ and $P_2'$ given the sta
 Let $\overrightarrow{OP_2}$ be the position vector of $P_2$. According to the Chasles relationship:
 $$\overrightarrow{OP_2} = \overrightarrow{OP'_1} + \overrightarrow{P'_1P_2}$$
 
-- The vector $\overrightarrow{P_1'P_2}$ is obtained with linear transformation:
-  $$
-  \overrightarrow{P_1'P_2} = \frac{l_1}{\lVert \overrightarrow{P_1'P_1''} \rVert} R(\alpha_1) \overrightarrow{P_1'P_1''}
- $$
-  where $R(\alpha_1)$ is the rotation matrix:
-$$
-  R(\alpha_1) = \begin{pmatrix} 
+The vector $\overrightarrow{P_1'P_2}$ is obtained with linear transformation:
+
+$$\overrightarrow{P_1'P_2} = \frac{l_1}{\lVert \overrightarrow{P_1'P_1''} \rVert} R(\alpha_1) \overrightarrow{P_1'P_1''}$$
+
+where $R(\alpha_1)$ is the rotation matrix:
+$$R(\alpha_1) = \begin{pmatrix} 
   \cos(\alpha_1) & -\sin(\alpha_1)\\ 
   \sin(\alpha_1) & \cos(\alpha_1)
-  \end{pmatrix}
-$$
-  and $\lVert \overrightarrow{P_1'P_1''} \rVert$ is the magnitude of the vector $\overrightarrow{P_1'P_1''}$ (obtained by the Pythagorean theorem):
-$$
-  \lVert \overrightarrow{P_1'P_1''} \rVert = \sqrt{l_1^2 - (\sin(\alpha_1)l_1)^2}
-$$
+  \end{pmatrix}$$
+and $\lVert \overrightarrow{P_1'P_1''} \rVert$ is the magnitude of the vector $\overrightarrow{P_1'P_1''}$ (obtained by the Pythagorean theorem):
+
+$$\lVert \overrightarrow{P_1'P_1''} \rVert = \sqrt{l_1^2 - (\sin(\alpha_1)l_1)^2}$$
 
 Thus, the position vector $\overrightarrow{OP_2}$ is:
-$$
-\overrightarrow{OP_2} = \overrightarrow{OP_1'} + \frac{l_1}{\sqrt{l_1^2 - (\sin(\alpha_1)l_1)^2}} R(\alpha_1)
+
+$$\overrightarrow{OP_2} = \overrightarrow{OP_1'} + \frac{l_1}{\sqrt{l_1^2 - (\sin(\alpha_1)l_1)^2}} R(\alpha_1)
 \begin{pmatrix}
 P_1' + \sqrt{l_1^2 - (\sin(\alpha_1)l_1)^2} \\
 P_1'
-\end{pmatrix}
-$$
+\end{pmatrix}$$
 
 ### Step 2: Calculation of $P_2'$
 
@@ -60,31 +56,25 @@ Next, we calculate the position of $P_2'$. Suppose that $\alpha_2 \in [-\pi, \pi
 
 According to the Chasles relationship: 
 
-$$
-\overrightarrow{OP_2'} = \overrightarrow{OP_2} + \overrightarrow{P_2C_2} + \overrightarrow{C_2P_2'}
-$$
+$$\overrightarrow{OP_2'} = \overrightarrow{OP_2} + \overrightarrow{P_2C_2} + \overrightarrow{C_2P_2'}$$
 
 The relationship between $C_2$ and $P_2'$ is given by the property of linear transformation:
-$$
-\overrightarrow{C_2P_2'} = R(\alpha_2) \overrightarrow{C_2P_2}
-$$
+
+$$\overrightarrow{C_2P_2'} = R(\alpha_2) \overrightarrow{C_2P_2}$$
 
 
 Additionally, the vector $\overrightarrow{C_2P_2}$ is:
-$$
-\overrightarrow{C_2P_2} = -\frac{R}{l_1} R\left(-\frac{\pi}{2}\right) \overrightarrow{P_1'P_2}
-$$
+
+$$\overrightarrow{C_2P_2} = -\frac{R}{l_1} R\left(-\frac{\pi}{2}\right) \overrightarrow{P_1'P_2}$$
 
 
 Substituting in the expressions for $\overrightarrow{P_2C_2}$ and $\overrightarrow{C_2P_2'}$, we finally get:
-$$
-\overrightarrow{OP_2'} = \overrightarrow{OP_1'} + \frac{l_1}{\sqrt{l_1^2 - (\sin(\alpha_1)l_1)^2}} R(\alpha_1)
+
+$$\overrightarrow{OP_2'} = \overrightarrow{OP_1'} + \frac{l_1}{\sqrt{l_1^2 - (\sin(\alpha_1)l_1)^2}} R(\alpha_1)
 \begin{pmatrix}
 P_1' + \sqrt{l_1^2 - (\sin(\alpha_1)l_1)^2} \\
 P_1'
-\end{pmatrix}
-+ \frac{R}{l_1} R\left(-\frac{\pi}{2}\right) [Id - R(\alpha_2)] \overrightarrow{P_1'P_2}
-$$
+\end{pmatrix} + \frac{R}{l_1} R\left(-\frac{\pi}{2}\right) [Id - R(\alpha_2)] \overrightarrow{P_1'P_2}$$
 ___
 If $\alpha_2 \geq 0$, replace $C_2$ with $C_1$.
 
