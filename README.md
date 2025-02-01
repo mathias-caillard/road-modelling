@@ -34,10 +34,13 @@ The vector $\overrightarrow{P_1'P_2}$ is obtained with linear transformation:
 $$\overrightarrow{P_1'P_2} = \frac{l_1}{\lVert \overrightarrow{P_1'P_1''} \rVert} R(\alpha_1) \overrightarrow{P_1'P_1''}$$
 
 where $R(\alpha_1)$ is the rotation matrix:
+
 $$R(\alpha_1) = \begin{pmatrix} 
   \cos(\alpha_1) & -\sin(\alpha_1)\\ 
   \sin(\alpha_1) & \cos(\alpha_1)
-  \end{pmatrix}$$
+  \end{pmatrix}
+  $$
+  
 and $\lVert \overrightarrow{P_1'P_1''} \rVert$ is the magnitude of the vector $\overrightarrow{P_1'P_1''}$ (obtained by the Pythagorean theorem):
 
 $$\lVert \overrightarrow{P_1'P_1''} \rVert = \sqrt{l_1^2 - (\sin(\alpha_1)l_1)^2}$$
